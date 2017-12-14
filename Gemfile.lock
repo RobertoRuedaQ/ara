@@ -71,10 +71,10 @@ GEM
     erubi (1.7.0)
     excon (0.59.0)
     execjs (2.7.0)
-    ffi (1.9.18)
-    firebase (0.2.6)
-      httpclient
+    fcm (0.0.2)
+      httparty
       json
+    ffi (1.9.18)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
     fog (1.42.0)
@@ -233,7 +233,8 @@ GEM
       activesupport (>= 4.2.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-    httpclient (2.8.3)
+    httparty (0.15.6)
+      multi_xml (>= 0.5.2)
     i18n (0.9.1)
       concurrent-ruby (~> 1.0)
     inflecto (0.0.2)
@@ -258,6 +259,7 @@ GEM
     mini_portile2 (2.2.0)
     minitest (5.10.3)
     multi_json (1.12.2)
+    multi_xml (0.6.0)
     netrc (0.11.0)
     nio4r (2.1.0)
     nokogiri (1.8.0)
@@ -369,7 +371,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   carrierwave (~> 1.0)
   coffee-rails (~> 4.2)
-  firebase
+  fcm
   fog
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)

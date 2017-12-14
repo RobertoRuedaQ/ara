@@ -1,6 +1,7 @@
 class PromosController < ApplicationController
+  require 'fcm'
   before_action :set_promo, only: [:show, :edit, :update, :destroy]
-
+  after_action :notification(@promo), only: :create
   # GET /promos
   # GET /promos.json
   def index
@@ -24,7 +25,7 @@ class PromosController < ApplicationController
   # POST /promos
   # POST /promos.json
   def create
-    base_uri = 'https://proyecto-ara.firebaseio.com/'
+    fcm = FCM.new("my_server_key")
     @promo = Promo.new(promo_params)
 
     respond_to do |format|
@@ -63,7 +64,26 @@ class PromosController < ApplicationController
     end
   end
 
+
+
+end
+
   private
+    def notification(promo)
+      require 'fcm'
+        fcm = FCM.new(Rails.application.secrets.firebase_server_token, timeout: 3)
+
+        registration_ids = [1,2]
+        options = {data: {score: "mynewscore"}, 
+                   notification: {
+                                      title: "test", 
+                                      body: "test",
+                                      icon: "myicon"}
+        ,collapse_key: "testeando desde rails", priority: "high"}
+        response = fcm.send(registration_ids, options)
+        render json: response
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_promo
       @promo = Promo.find(params[:id])
