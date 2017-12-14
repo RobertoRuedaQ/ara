@@ -1,7 +1,7 @@
 class PromosController < ApplicationController
   require 'fcm'
   before_action :set_promo, only: [:show, :edit, :update, :destroy]
-  after_action :notification(@promo), only: :create
+  after_action :notification, only: :create
   # GET /promos
   # GET /promos.json
   def index
@@ -64,16 +64,12 @@ class PromosController < ApplicationController
     end
   end
 
-
-
-end
-
   private
-    def notification(promo)
+    def notification
       require 'fcm'
         fcm = FCM.new(Rails.application.secrets.firebase_server_token, timeout: 3)
 
-        registration_ids = [1,2]
+        registration_ids = [1]
         options = {data: {score: "mynewscore"}, 
                    notification: {
                                       title: "test", 
