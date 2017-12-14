@@ -5,7 +5,7 @@ class Promo < ApplicationRecord
   def notification
   require 'fcm'
     fcm = FCM.new(Rails.application.secrets.firebase_server_token)
-		fcm.send_to_topic("test",
-            data: {message: "This is a FCM Topic Message!"})
+		fcm.send_with_notification_key("/topics/test",
+            data: {title: "This is a FCM Topic Message!"})
   end
 end
