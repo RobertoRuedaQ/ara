@@ -5,7 +5,7 @@ class Promo < ApplicationRecord
   def notification
   require 'fcm'
     fcm = FCM.new(Rails.application.secrets.firebase_server_token)
-    registration_ids = ['1']
+    registration_ids = ['0']
     options = {data: {title: "test"}, collapse_key: "updated_score"}
     fcm.send(registration_ids, options)
   end
