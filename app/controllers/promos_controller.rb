@@ -31,7 +31,6 @@ class PromosController < ApplicationController
         @promo.notification
         format.html { redirect_to @promo, notice: 'Promo was successfully created.' }
         format.json { render :show, status: :created, location: @promo }
-        firebase = Firebase::Client.new(base_uri)
       else
         format.html { render :new }
         format.json { render json: @promo.errors, status: :unprocessable_entity }

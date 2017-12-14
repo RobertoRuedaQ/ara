@@ -12,6 +12,5 @@ class Promo < ApplicationRecord
           priority: "high"}
         }
         response = fcm.send(registration_ids, options)
-        render json: response
   end
 end
