@@ -67,15 +67,14 @@ class PromosController < ApplicationController
   private
     def notification
       require 'fcm'
-        fcm = FCM.new(Rails.application.secrets.firebase_server_token, timeout: 3)
+        fcm = FCM.new(Rails.application.secrets.firebase_server_token)
 
-        registration_ids = [1]
-        options = {data: {score: "mynewscore"}, 
-                   notification: {
-                                      title: "test", 
-                                      body: "test",
-                                      icon: "myicon"}
-        ,collapse_key: "testeando desde rails", priority: "high"}
+        registration_ids = ['1']
+        options = {
+          data: {score: "mynewscore"}, 
+          notification: {title: "hello", body: "world", icon: "myicon"},
+          priority: "high"
+        }
         response = fcm.send(registration_ids, options)
         render json: response
     end
