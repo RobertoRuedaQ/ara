@@ -9,7 +9,7 @@ class Promo < ApplicationRecord
         registration_ids = ['1']
         options = {
           data: { notification: {title: "hello", body: "world", icon: "myicon"},
-          priority: "high"
+          priority: "high"}
         }
         response = fcm.send(registration_ids, options)
         render json: response
