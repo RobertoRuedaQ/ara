@@ -4,7 +4,7 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-
+gem 'google-api-client', '~> 0.11'
 gem 'fcm'
 gem 'fog'
 gem 'carrierwave', '~> 1.0'

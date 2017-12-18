@@ -2,8 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .title{
-	width: 120px;
-	height: 40px;
 	background-color: rgb(237,28,36);
 	border-radius: 5px;
 	color: white;
@@ -11,8 +9,6 @@
 
 
 .price{
-	width: 120px;
-	height: 90px;
 	background-color: rgb(255,203,8);
 	border-radius: 5px;
 	font-size: 15px;
@@ -20,7 +16,50 @@
 
 
 .description{
-	width: 120px;
-	height: 90px;
-	font-size: 8px;
+	font-size: 10px;
 }
+
+div.productbox{
+	display: inline-block;
+	width: 85%;
+	height:50%;
+	padding: 10px 60px;
+	margin: 1px auto;
+	align-content: center;
+}
+
+.product-image{
+  width: 80%;
+  height: 90%; 
+}
+
+
+@media screen 
+  and (max-width: 480px) 
+  and (orientation: portrait) {
+	
+		.title{
+
+	position: relative;
+	align-content: center;
+	margin: 10px auto;
+	}
+
+
+	.price{
+
+	position: relative;
+	}
+
+
+	.description{
+	font-size: 8px;
+	position: relative;
+	}
+
+}
+
+
+
+
+

@@ -1,17 +1,16 @@
-<div class="row">
-  <div class="container-fluid" style="margin-bottom: 200px">
-    <div class="container-fluid">
-      <div class="row">
-        <% @promos.each do |promo| %>
-        <div class="col-md-2">
-          <%= image_tag(promo.imagen_url, :width => 100, :height => 100) if promo.imagen.present? %>
+<div class="container">
+  <div class="row">
+    <% @promos.each do |promo| %>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <%= image_tag(promo.imagen_url, :width => 130, :height => 130, class: "img-responsive") if promo.imagen.present? %>
+        <div class="caption">
           <div class="title"><%= promo.title %></div>
           <div class="price"><%= promo.price %></div>
           <div class="description"><%= promo.description %></div>  
         </div>
-        <% end %> 
       </div>
     </div>
+          <% end %> 
   </div>
-</div>
 </div>
