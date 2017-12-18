@@ -3,7 +3,7 @@
     <% @promos.each do |promo| %>
     <div class="col-md-4">
       <div class="thumbnail">
-        <%= image_tag(promo.imagen_url, :width => 130, :height => 130, class: "img-responsive") if promo.imagen.present? %>
+        <%= image_tag(promo.imagen_url, :width => 175, :height => 175, class: "img-responsive") if promo.imagen.present? %>
         <div class="caption">
           <div class="title"><%= promo.title %></div>
           <div class="price"><%= promo.price %></div>
