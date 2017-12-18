@@ -1,3 +1,26 @@
 // Place all the styles related to the Promos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.title{
+	width: 120px;
+	height: 40px;
+	background-color: rgb(237,28,36);
+	border-radius: 5px;
+	color: white;
+}
+
+
+.price{
+	width: 120px;
+	height: 90px;
+	background-color: rgb(255,203,8);
+	border-radius: 5px;
+	font-size: 15px;
+}
+
+
+.description{
+	width: 120px;
+	height: 90px;
+	font-size: 8px;
+}

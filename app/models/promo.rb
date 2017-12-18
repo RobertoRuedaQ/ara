@@ -1,6 +1,7 @@
 class Promo < ApplicationRecord
   belongs_to :category
   mount_uploader :imagen, ImagenUploader
+  validate :title, :imagen, :description, :category, :price
 
   def notification
   require 'fcm'

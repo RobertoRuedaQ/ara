@@ -24,11 +24,12 @@ class PromosController < ApplicationController
   # POST /promos
   # POST /promos.json
   def create
-    fcm = FCM.new("my_server_key")
     @promo = Promo.new(promo_params)
     respond_to do |format|
       if @promo.save
-        @promo.notification
+        fcm = FCM.new(Rails.application.secrets.firebase_server_token)
+        response = fcm.send_to_topic("yourTopic",
+            data: {message: "This is a FCM Topic Message!")
         format.html { redirect_to @promo, notice: 'Promo was successfully created.' }
         format.json { render :show, status: :created, location: @promo }
       else
@@ -71,6 +72,6 @@ class PromosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def promo_params
-      params.require(:promo).permit(:title, :imagen, :description, :category_id)
+      params.require(:promo).permit(:title, :imagen, :description,:price,:category_id)
     end
 end

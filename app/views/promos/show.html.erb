@@ -9,7 +9,10 @@
   <strong>Imagen:</strong>
   <%= image_tag(@promo.imagen_url, :width => 200, :height => 200) if @promo.imagen.present? %>
 </p>
-
+<p>
+  <strong>Price:</strong>
+  <%= @promo.price %>
+</p>
 <p>
   <strong>Description:</strong>
   <%= @promo.description %>
