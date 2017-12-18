@@ -28,8 +28,8 @@ class PromosController < ApplicationController
     respond_to do |format|
       if @promo.save
         fcm = FCM.new(Rails.application.secrets.firebase_server_token)
-        response = fcm.send_to_topic("yourTopic",
-            data: {message: "This is a FCM Topic Message!"})
+        response = fcm.send_to_topic("promocion",
+            data: {message: "Una gran promo de ARA!"})
         format.html { redirect_to @promo, notice: 'Promo was successfully created.' }
         format.json { render :show, status: :created, location: @promo }
       else
