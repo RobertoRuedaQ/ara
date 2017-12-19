@@ -14,18 +14,18 @@ body{
   text-align: center;
   font-size: 30px;
   color:red;
-  position: block;
+  position: relative;
 }
 
 .descripcion{
   font-size: 6px;
-  position: block;
+  position: relative;
 }
 
 .precio{
   font-size: 40px;
   color: red;
-  position: block;
+  position: relative;
 }
 
 
@@ -100,25 +100,28 @@ body{font-family: 'Quicksand', sans-serif;}
     -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.16);
     box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.16);
     padding: 10px 10px 0px 10px;
-    min-height: 210px;
+    min-height: 300px;
     width: 85%;
     margin: 5px auto;
     display: block;
 
   }
 
-  span.thumbnail .col-md-4{
+  span.thumbnail .col-md-6{
     width: 50%;
     margin-right: 0px;
   }
 
-.container h4{margin-top:3px; margin-bottom:0px;}
-button {    margin-top: 6px;
+.container h4{
+  margin-top:3px; 
+  margin-bottom:0px;
 }
+
 .right {
     float: right;
     border-bottom: 2px solid #0a5971;
 }
+
 .btn-info {
   color: #fff !important;
   background-color: #ac1816 !important;
@@ -145,72 +148,25 @@ button {    margin-top: 6px;
   margin-bottom: 0px !important;
 }
 
-.line{
-    margin-bottom: 5px;
-    margin-top: 4px;
-    color:#cccccc;
-  }
-
-.btn-info {
-  color: #fff;
-  background-color: #19b4e2;
-  border-color: #19b4e2;
-  font-size:13px;
-  font-weight:600;
-}
-.input_product{
-  width: 100%;
-  padding: 5px;
-  margin-bottom: 0px;
-  border-radius: 5px;
-}
-
-.transition-timer-carousel .carousel-caption {
-    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 4%, rgba(0,0,0,0.5) 32%, rgba(0,0,0,1) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(4%,rgba(0,0,0,0.1)), color-stop(32%,rgba(0,0,0,0.5)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-  width: 100%;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  text-align: left;
-  padding-top: 5px;
-  padding-left: 15%;
-  padding-right: 15%;
-}
-.transition-timer-carousel .carousel-caption .carousel-caption-header {
-  margin-top: 10px;
-  font-size: 24px;
-}
-
-.carousel{
-  height: 180px;
-  margin-top: 30px;
-}
-
-.carousel-height-products{
-  height: 180px;
-}
 
 
 
-@media screen 
-  and (max-width: 480px) 
-  and (orientation: portrait) {
+
+
+
+// @media screen 
+//   and (max-width: 480px) 
+//   and (orientation: portrait) {
     
-    span.thumbnail img{
-      margin-right: 0px;
-    }
-    .container-promo{
-      width: 75%;  
-    }
-    .container-promo p {
-      font-size: 18px !important;
-      font-style: bold;
-    }
+//     span.thumbnail img{
+//       margin-right: 0px;
+//     }
+//     .container-promo{
+//       width: 75%;  
+//     }
+//     .container-promo p {
+//       font-size: 18px !important;
+//       font-style: bold;
+//     }
 
-}
+// }
