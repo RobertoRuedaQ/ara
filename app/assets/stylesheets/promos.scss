@@ -15,6 +15,15 @@ body{
   font-size: 25px;
   color:red;
   position: relative;
+  margin: 0px auto;
+}
+
+.precio{
+  text-align: center;
+  font-size: 35px;
+  color: red;
+  position: relative;
+  margin: 0px auto;
 }
 
 .descripcion{
@@ -22,15 +31,9 @@ body{
   position: relative;
 }
 
-.precio{
-  font-size: 35px;
-  color: red;
-  position: relative;
-}
-
 
   .thumbnail img{
-    margin: 0px 40%;
+    margin: 0px 39%;
   }
 
 // Place all the styles related to the Products controller here.
