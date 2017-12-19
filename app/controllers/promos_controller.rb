@@ -29,8 +29,8 @@ class PromosController < ApplicationController
     @promo = Promo.new(promo_params)
     respond_to do |format|
       if @promo.save
-        key = "AAAAvlwXA28:APA91bHCmKQSCSG2OPTw5zWA7DER2e4wu4bSfDPio4Op6kgZA--mGySiH_1amDovehorMPTA4ySxFeGBXzCiqI-Jx4sEGm0Uw69YbLPZVjGHFukyz2cnu77rBENOq0hfPQOXj5CdCsyy"
-        notification = FCM.new(key).send_to_topic("promocion", notification: {body: "U#{@promo.description}", title: "#{@promo.title}", icon: "myicon"}, data:{'url': "#{@promo.imagen.url}"})
+        key = Rails.application.secrets.firebase_server_token
+        notification = FCM.new(key).send_to_topic("promocion", notification: {body: "#{@promo.description}", title: "#{@promo.title}", icon: "myicon", sound: "default", data: {url: "#{@promo.imagen.url}"}})
         p notification
         format.html { redirect_to @promo, notice: 'Promo was successfully created.' }
         format.json { render :show, status: :created, location: @promo }
