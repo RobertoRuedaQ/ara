@@ -4,7 +4,7 @@
     <% @promos.each do |promo| %>
       <span class="thumbnail">
           <div class="col-sm-4">
-            <%= image_tag(promo.imagen_url, :width => 150, :height => 150, style: "padding: 20px 5px 25px 5px;") if promo.imagen.present? %>
+            <%= image_tag(promo.imagen_url, :width => 120, :height => 120) if promo.imagen.present? %>
           </div>
           <div class="col-sm-8">
             <div class="container-promo">
