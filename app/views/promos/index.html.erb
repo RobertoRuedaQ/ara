@@ -3,10 +3,10 @@
   <div class="row">
     <% @promos.each do |promo| %>
       <span class="thumbnail">
-          <div class="col-sm-4">
+          <div class="col-sm-6">
             <%= image_tag(promo.imagen_url, :width => 120, :height => 120) if promo.imagen.present? %>
           </div>
-          <div class="col-sm-8">
+          <div class="col-sm-6">
             <div class="container-promo">
               <h4 class="titulo"><%= promo.title %></h4>
               <p class="descripcion"><%= promo.description %></p>
