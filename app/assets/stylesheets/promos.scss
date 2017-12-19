@@ -1,65 +1,210 @@
 // Place all the styles related to the Promos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.title{
-	background-color: rgb(237,28,36);
-	border-radius: 5px;
-	color: white;
+
+body{
+	background: asset-url('Ara2.png') no-repeat;
+  background-size: cover !important; 
+  height: auto;
+  width: auto;
 }
 
 
-.price{
-	background-color: rgb(255,203,8);
-	border-radius: 5px;
-	font-size: 15px;
+.titulo{
+  text-align: center;
+  font-size: 30px;
+  color:red;
+}
+
+.descripcion{
+  
+}
+
+.precio{
+  font-size: 50px;
+  color: red;
 }
 
 
-.description{
-	font-size: 10px;
+// Place all the styles related to the Products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&subset=latin-ext,vietnamese');   
+body{font-family: 'Quicksand', sans-serif;}
+   h4{
+      font-weight: 600;
+  }
+
+  .col-md-6 .sell_price{
+    font-size: 14px;
+    margin: 5px auto;
+    color: #ac1816;
+
+  }
+
+  input[type='submit']{
+    min-width: 80px !important;
+    margin: 30px 10px 0px 10px;
+
+  }
+
+  .category-list a{
+    font-size: 10px;
+    color: #737373;
+    text-decoration: none;
+    padding: 0px !important;
+    margin: 5px 10px;
+  }
+
+  .category-list li{
+    position: relative;
+    display: block;
+    padding: 5px 5px;
+    margin: 5px auto;
+  }
+
+  .category-list-ul li{
+    padding: 5px !important;
+  }
+
+  ul.category-list-ul{
+  display: inline-block;
+  }
+
+  .thumbnail{
+    // opacity:0.70;
+    // -webkit-transition: all 0.5s; 
+    // transition: all 0.5s;
+  }
+  .thumbnail:hover{
+    opacity:1.00;
+    box-shadow: 0px 0px 12px #cccccc;
+  }
+  .line{
+    border-width: 0.8px;
+    border-color: #ac1816;
+  }
+  @media screen and (max-width: 770px) {
+    .right{
+      float:left;
+      width: 100%;
+    }
+  }
+  span.thumbnail {
+    border: 5px dotted #ac1816 !important;
+    border-radius: 10px !important;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.16);
+    padding: 10px 10px 0px 10px;
+    min-height: 210px;
+
+  }
+
+  span.thumbnail .col-md-4{
+    width: 50%;
+    margin-right: 0px;
+  }
+
+.container h4{margin-top:3px; margin-bottom:0px;}
+button {    margin-top: 6px;
+}
+.right {
+    float: right;
+    border-bottom: 2px solid #0a5971;
+}
+.btn-info {
+  color: #fff !important;
+  background-color: #ac1816 !important;
+  border-color: #fff !important; 
+  font-size:11px;
+  font-weight:100;
+  max-width: 70px !important;
 }
 
-div.productbox{
-	display: inline-block;
-	width: 85%;
-	height:50%;
-	padding: 10px 60px;
-	margin: 1px auto;
-	align-content: center;
+
+.sell_price{
+  color:#ac1816;
+  font-weight: bolder;
+  font-size: 20px;
+  margin: 5px 5px;
 }
 
-.product-image{
-  width: 80%;
-  height: 90%; 
+.product_name{
+  font-weight: bold;
+  font-size: 12px;
+  color:black;
+  text-align: center;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
 }
+
+.line{
+    margin-bottom: 5px;
+    margin-top: 4px;
+    color:#cccccc;
+  }
+
+.btn-info {
+  color: #fff;
+  background-color: #19b4e2;
+  border-color: #19b4e2;
+  font-size:13px;
+  font-weight:600;
+}
+.input_product{
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 0px;
+  border-radius: 5px;
+}
+
+.transition-timer-carousel .carousel-caption {
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 4%, rgba(0,0,0,0.5) 32%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(4%,rgba(0,0,0,0.1)), color-stop(32%,rgba(0,0,0,0.5)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+  width: 100%;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  text-align: left;
+  padding-top: 5px;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+.transition-timer-carousel .carousel-caption .carousel-caption-header {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+.carousel{
+  height: 180px;
+  margin-top: 30px;
+}
+
+.carousel-height-products{
+  height: 180px;
+}
+
 
 
 @media screen 
   and (max-width: 480px) 
   and (orientation: portrait) {
-	
-		.title{
-
-	position: relative;
-	align-content: center;
-	margin: 10px auto;
-	}
-
-
-	.price{
-
-	position: relative;
-	}
-
-
-	.description{
-	font-size: 8px;
-	position: relative;
-	}
+    
+    span.thumbnail img{
+      margin-right: 0px;
+    }
+    .container-promo{
+      width: 75%;  
+    }
+    .container-promo p {
+      font-size: 18px !important;
+      font-style: bold;
+    }
 
 }
-
-
-
-
-

@@ -1,16 +1,19 @@
-<div class="container">
+
+<div class="container" style="margin-top: 20px">
   <div class="row">
     <% @promos.each do |promo| %>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <%= image_tag(promo.imagen_url, :width => 175, :height => 175, class: "img-responsive") if promo.imagen.present? %>
-        <div class="caption">
-          <div class="title"><%= promo.title %></div>
-          <div class="price"><%= promo.price %></div>
-          <div class="description"><%= promo.description %></div>  
-        </div>
-      </div>
-    </div>
-          <% end %> 
+      <span class="thumbnail">
+          <div class="col-sm-4">
+            <%= image_tag(promo.imagen_url, :width => 200, :height => 200, style: "padding: 20px 5px 25px 5px;") if promo.imagen.present? %>
+          </div>
+          <div class="col-sm-8">
+            <div class="container-promo">
+              <h4 class="titulo"><%= promo.title %></h4>
+              <p class="descripcion"><%= promo.description %></p>
+              <h4 class="precio pull-right"><%= number_to_currency(promo.price, strip_insignificant_zeros: true) %></h4>
+            </div>
+          </div>
+      </span>
+    <%end %>
   </div>
 </div>

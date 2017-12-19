@@ -80,6 +80,7 @@ GEM
     ffi (1.9.18)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
+    flexslider-rails (1.0.0)
     fog (1.42.0)
       fog-aliyun (>= 0.1.0)
       fog-atmos
@@ -394,6 +395,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   faraday (~> 0.9.2)
   fcm
+  flexslider-rails
   fog
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
