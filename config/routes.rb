@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'carousel/index'
+
   resources :promos
   resources :categories
 	root to: 'promos#new'
