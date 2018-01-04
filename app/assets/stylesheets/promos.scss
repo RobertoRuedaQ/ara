@@ -1,65 +1,190 @@
 // Place all the styles related to the Promos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.title{
-	background-color: rgb(237,28,36);
-	border-radius: 5px;
-	color: white;
+
+body{
+	background: asset-url('Ara2.png') no-repeat;
+  background-size: cover !important; 
+  height: auto;
+  width: auto;
+}
+
+.navbar{
+  background-color: #ff3e0f;
+  width: 100%;
+  text-align: center;
+}
+
+.navbar-header{
+  align-content: center;
+  float: none;
+  display: inline-block;
+  margin: 0px auto; 
 }
 
 
-.price{
-	background-color: rgb(255,203,8);
-	border-radius: 5px;
-	font-size: 15px;
+.titulo{
+  text-align: center;
+  font-size: 25px;
+  color:red;
+  position: relative;
+  margin: 0px auto;
+}
+
+.precio{
+  text-align: center;
+  font-size: 35px;
+  color: red;
+  position: relative;
+  margin: 5px auto;
+}
+
+.descripcion{
+  text-align: center;
+  font-size: 9px;
+  position: relative;
+  margin-top: 8px;
 }
 
 
-.description{
-	font-size: 10px;
+  .thumbnail img{
+    margin: 0px auto;
+    display: block;
+  }
+
+// Place all the styles related to the Products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&subset=latin-ext,vietnamese');   
+body{font-family: 'Quicksand', sans-serif;}
+   h4{
+      font-weight: 600;
+  }
+
+  .col-md-6 .sell_price{
+    font-size: 14px;
+    margin: 5px auto;
+    color: #ac1816;
+
+  }
+
+  input[type='submit']{
+    min-width: 80px !important;
+    margin: 30px 10px 0px 10px;
+
+  }
+
+  .category-list a{
+    font-size: 10px;
+    color: #737373;
+    text-decoration: none;
+    padding: 0px !important;
+    margin: 5px 10px;
+  }
+
+  .category-list li{
+    position: relative;
+    display: block;
+    padding: 5px 5px;
+    margin: 5px auto;
+  }
+
+  .category-list-ul li{
+    padding: 5px !important;
+  }
+
+  ul.category-list-ul{
+  display: inline-block;
+  }
+
+  .thumbnail{
+    // opacity:0.70;
+    // -webkit-transition: all 0.5s; 
+    // transition: all 0.5s;
+  }
+  .thumbnail:hover{
+    opacity:1.00;
+    box-shadow: 0px 0px 12px #cccccc;
+  }
+  .line{
+    border-width: 0.8px;
+    border-color: #ac1816;
+  }
+  @media screen and (max-width: 770px) {
+    .right{
+      float:left;
+      width: 100%;
+    }
+  }
+  span.thumbnail {
+    border: 5px dotted #ac1816 !important;
+    border-radius: 15px !important;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.16);
+    padding: 15px;
+    min-height: 250px;
+    width: 85%;
+    margin: 10px auto;
+    display: block;
+
+  }
+
+.container h4{
+  margin-top:3px; 
+  margin-bottom:0px;
 }
 
-div.productbox{
-	display: inline-block;
-	width: 85%;
-	height:50%;
-	padding: 10px 60px;
-	margin: 1px auto;
-	align-content: center;
+.right {
+    float: right;
+    border-bottom: 2px solid #0a5971;
 }
 
-.product-image{
-  width: 80%;
-  height: 90%; 
+.btn-info {
+  color: #fff !important;
+  background-color: #ac1816 !important;
+  border-color: #fff !important; 
+  font-size:11px;
+  font-weight:100;
+  max-width: 70px !important;
 }
 
 
-@media screen 
-  and (max-width: 480px) 
-  and (orientation: portrait) {
-	
-		.title{
+.sell_price{
+  color:#ac1816;
+  font-weight: bolder;
+  font-size: 20px;
+  margin: 5px 5px;
+}
 
-	position: relative;
-	align-content: center;
-	margin: 10px auto;
-	}
-
-
-	.price{
-
-	position: relative;
-	}
-
-
-	.description{
-	font-size: 8px;
-	position: relative;
-	}
-
+.product_name{
+  font-weight: bold;
+  font-size: 12px;
+  color:black;
+  text-align: center;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
 }
 
 
 
 
 
+
+
+// @media screen 
+//   and (max-width: 480px) 
+//   and (orientation: portrait) {
+    
+//     span.thumbnail img{
+//       margin-right: 0px;
+//     }
+//     .container-promo{
+//       width: 75%;  
+//     }
+//     .container-promo p {
+//       font-size: 18px !important;
+//       font-style: bold;
+//     }
+
+// }

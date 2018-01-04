@@ -10,33 +10,39 @@
       </ul>
     </div>
   <% end %>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6"><%= form.label :title, t("Encabezado de la promoción") %></div>
+      <div class="col-md-6"><%= form.text_field :title, id: :promo_title %></div>
+    </div>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :promo_title %>
-  </div>
+    <div class="row">
+      <div class="col-md-6"><%= form.label :imagen, t("Imagen") %></div>
+      <div class="col-md-6"><%= form.file_field :imagen, id: :promo_imagen %></div>
+    </div>
 
-  <div class="field">
-    <%= form.label :imagen %>
-    <%= form.file_field :imagen, id: :promo_imagen %>
-  </div>
+    <div class="row">
+      <div class="col-md-6"><%= form.label :price, t("Precio") %></div>
+      <div class="col-md-6"> <%= form.number_field :price, id: :promo_price %></div>
+    </div>
 
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price, id: :promo_price %>
-  </div>
+    <div class="row">
+      <div class="col-md-6"><%= form.label :description, t("Descripción de la promoción") %></div>
+      <div class="col-md-6"><%= form.text_area :description, id: :promo_description %></div>
+    </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :promo_description %>
-  </div>
+    <div class="row">
+      <div class="col-md-6"><%= form.label :category_id, t("Categoría") %></div>
+      <div class="col-md-6"><%= form.collection_select :category_id, Category.all, :id, :name, include_blank: true %></div>
+    </div>
+     
 
-  <div class="field">
-    <%= form.label :category_id %>
-    <%= form.collection_select :category_id, Category.all, :id, :name, include_blank: true %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+     <div class="row">
+      <div class="col-md-6"></div>
+      <div class="col-md-6"><%= form.submit %></div>
+    </div>
+    
+    <%= link_to 'Regresar', promos_path %>
   </div>
 <% end %>

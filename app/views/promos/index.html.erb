@@ -1,16 +1,35 @@
-<div class="container">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="navbar-header">
+    <%= image_tag('logo_ara.png', style: "width: 100px, height: 100px;") %>
+  </div>
+</nav>
+
+
+<div class="container" style="margin-top: 20%; padding: 10px 20px;">
   <div class="row">
     <% @promos.each do |promo| %>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <%= image_tag(promo.imagen_url, :width => 130, :height => 130, class: "img-responsive") if promo.imagen.present? %>
-        <div class="caption">
-          <div class="title"><%= promo.title %></div>
-          <div class="price"><%= promo.price %></div>
-          <div class="description"><%= promo.description %></div>  
+      <span class="thumbnail">
+        <div class="row">
+          <div class="col-md-12">
+            <%= image_tag(promo.imagen_url, :width => 120, :height => 120) if promo.imagen.present? %>
+          </div>
         </div>
-      </div>
-    </div>
-          <% end %> 
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="titulo"><%= promo.title %></h4>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <h4 class="precio"><%= number_to_currency(promo.price, strip_insignificant_zeros: true) %></h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+                <p class="descripcion"><%= promo.description %></p>
+            </div>
+          </div>
+        </div>
+      </span>
+    <%end %>
   </div>
 </div>

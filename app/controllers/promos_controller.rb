@@ -3,6 +3,8 @@ class PromosController < ApplicationController
   before_action :set_promo, only: [:show, :edit, :update, :destroy]
   # GET /promos
   # GET /promos.json
+
+
   def index
     @promos = Promo.all
   end
@@ -27,18 +29,17 @@ class PromosController < ApplicationController
     @promo = Promo.new(promo_params)
     respond_to do |format|
       if @promo.save
-        fcm = FCM.new(Rails.application.secrets.firebase_server_token)
-        response = fcm.send_to_topic("promocion",
-            data: {message: "Una gran promo de ARA!"})
-        puts response
+        key = Rails.application.secrets.firebase_server_token
+        notification = FCM.new(key).send_to_topic("promocion", notification: {body: "#{@promo.description}", title: "#{@promo.title}", icon: "myicon", sound: "default", vibrate: "true", data: {url: "#{@promo.imagen.url}"}})
+        p notification
         format.html { redirect_to @promo, notice: 'Promo was successfully created.' }
         format.json { render :show, status: :created, location: @promo }
       else
         format.html { render :new }
         format.json { render json: @promo.errors, status: :unprocessable_entity }
       end
+      end
     end
-  end
 
   # PATCH/PUT /promos/1
   # PATCH/PUT /promos/1.json
@@ -65,7 +66,7 @@ class PromosController < ApplicationController
   end
 
   private
-
+    
     # Use callbacks to share common setup or constraints between actions.
     def set_promo
       @promo = Promo.find(params[:id])
